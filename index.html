@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سند القميشي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #101a24;
+    --navy-2: #16222e;
+    --gold: #c8a24a;
+    --gold-soft: #e4cf94;
+    --ivory: #e9e2cf;
+    --muted: #8b96a1;
+    --rule: rgba(200,162,74,0.35);
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html{ scroll-padding-top: env(safe-area-inset-top, 0px); }
+  *{ box-sizing: inherit; }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --navy: #0b131b; --navy-2: #111c26;
+    }
+  }
+  :root[data-theme="dark"]{ --navy: #0b131b; --navy-2: #111c26; }
+
+  body{
+    margin:0;
+    background: var(--navy);
+    color: var(--ivory);
+    font-family: 'Cairo', sans-serif;
+    font-weight: 300;
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 64px 28px 80px;
+  }
+
+  .seal{
+    width: 96px; height: 96px;
+    margin: 0 auto 28px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    display:flex; align-items:center; justify-content:center;
+    position: relative;
+  }
+  .seal::before{
+    content:"";
+    position:absolute; inset:6px;
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+  }
+  .seal span{
+    font-family:'Amiri', serif;
+    font-size: 26px;
+    color: var(--gold-soft);
+    letter-spacing: 2px;
+  }
+
+  h1{
+    font-family:'Amiri', serif;
+    font-weight: 700;
+    font-size: clamp(28px, 6vw, 40px);
+    text-align:center;
+    margin: 0 0 6px;
+    color: var(--ivory);
+  }
+  .kunya{
+    text-align:center;
+    color: var(--gold-soft);
+    font-family:'Amiri', serif;
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+  .tagline{
+    text-align:center;
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 480px;
+    margin: 0 auto 48px;
+  }
+
+  .rule{
+    height:1px;
+    background: var(--rule);
+    margin: 44px 0 30px;
+  }
+
+  h2{
+    font-family:'Amiri', serif;
+    font-weight:700;
+    font-size: 21px;
+    color: var(--gold);
+    margin: 0 0 18px;
+  }
+
+  p{ margin: 0 0 14px; color: var(--ivory); font-size: 16px; }
+  p.small{ color: var(--muted); font-size: 14.5px; }
+
+  .facts{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 24px;
+    margin-bottom: 6px;
+  }
+  .fact dt{
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  .fact dd{
+    margin:0;
+    color: var(--ivory);
+    font-size: 16px;
+    font-family:'Amiri', serif;
+  }
+
+  .quiet-box{
+    border-right: 2px solid var(--gold);
+    padding-right: 18px;
+    margin-top: 22px;
+  }
+
+  footer{
+    margin-top: 56px;
+    text-align:center;
+  }
+  footer .rule{ margin: 0 0 28px; }
+  footer a{
+    color: var(--gold-soft);
+    text-decoration:none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+    font-family:'Amiri', serif;
+    font-size: 17px;
+  }
+  footer p.small{ margin-top: 14px; }
+
+  @media (max-width: 480px){
+    .facts{ grid-template-columns: 1fr; }
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+    .page{ animation: rise 0.6s ease-out; }
+    @keyframes rise{ from{ opacity:0; transform: translateY(8px);} to{opacity:1; transform:none;} }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="seal"><span>س ق</span></div>
+  <h1>سند بن عبدالملك بن صالح بن أحمد بن عوض القميشي</h1>
+  <p class="kunya">القميشي</p>
+  <p class="tagline">طالب جامعي متخصص في الشريعة، ومتطوع في الهلال الأحمر السعودي</p>
+
+  <div class="rule"></div>
+
+  <h2>نبذة شخصية</h2>
+  <dl class="facts">
+    <div class="fact"><dt>سنة الميلاد</dt><dd>١٤٢٢هـ / ٢٠٠١م</dd></div>
+    <div class="fact"><dt>مكان الميلاد</dt><dd>جدة</dd></div>
+    <div class="fact"><dt>الدراسة</dt><dd>طالب جامعي، تخصص الشريعة</dd></div>
+    <div class="fact"><dt>التطوع</dt><dd>الهلال الأحمر السعودي</dd></div>
+  </dl>
+  <p class="quiet-box">شخصية هادئة ومسالمة، ميّال إلى الانطواء وتجنّب المشكلات، ومتديّن يعتز بدينه ويحرص على التمسك به.</p>
+
+  <div class="rule"></div>
+
+  <h2>النسب والقبيلة</h2>
+  <p>ينتمي إلى قبيلة القموش (القميشي)، من القبائل الحميرية العريقة في اليمن وشبه الجزيرة العربية، ويعود نسبها إلى حِمْيَر بن سبأ بن يشجب بن يعرب بن قحطان، عبر نعمان بن حمير ثم سعد فالقموش.</p>
+  <p>تتمركز ديار القبيلة تاريخيًا في محافظة شبوة اليمنية، وتحديدًا مديرية حبان ووادييْ لهية ولحيّة، وهي مناطق عُرفت بثبات أهلها وصمودهم عبر العصور. تشتهر القبيلة بالشهامة والكرم وإغاثة الملهوف، وبالبأس والتكاتف بين أبنائها، وبحضور رجال حكمة وشيوخ فصل يُرجع إليهم في حل النزاعات وإصلاح ذات البين.</p>
+  <p class="small">مع الإشارة إلى أن الانتساب سعودي أصلًا ومنشأً، ويعود النسب إلى اليمن من جهة القبيلة فقط.</p>
+
+  <div class="rule"></div>
+
+  <h2>عن الوالد</h2>
+  <p>الوالد عبدالملك القميشي، تاجر يملك محلات تجارية في منطقة جيزان، وتحديدًا في صامطة (المسارحة، مديحمة، والصوارمة).</p>
+
+  <footer>
+    <div class="rule"></div>
+    <p class="small">للتواصل</p>
+    <a href="mailto:rn5gjj@gmail.com">rn5gjj@gmail.com</a>
+  </footer>
+
+</div>
+</body>
+</html>
